@@ -1,13 +1,23 @@
 Vue.use(VueRouter);
 
-const Home = Vue.component('home', httpVueLoader('components/Home.vue'));
-const Foo = Vue.component('foo', httpVueLoader('components/Foo.vue'));
-const Bar = Vue.component('bar', httpVueLoader('components/Bar.vue'));
+const componentInfos = [
+  {
+    name: 'home',
+    componentUrl: 'components/Home.vue',
+    path: '/'
+  },
+  {
+    name: 'about',
+    componentUrl: 'components/About.vue',
+    path: '/about'
+  }
+]
+
+const routes = componentInfos.map(function(component) {
+  component.component = Vue.component(component.name, httpVueLoader(component.componentUrl));
+  return component;
+});
 
 const router = new VueRouter({
-  routes: [
-    { path: '/', name: 'home', component: Home },
-    { path: '/foo', name: 'foo', component: Foo },
-    { path: '/bar', name: 'bar', component: Bar }
-  ]
+  routes: routes
 });

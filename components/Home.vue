@@ -1,12 +1,20 @@
 <template lang="html">
-  <h1>{{title}}</h1>
+  <div>
+    <h3>{{title}}</h3>
+    <list></list>
+  </div>
 </template>
 
 <script>
+const List = httpVueLoader('components/list/List.vue');
+
 module.exports = {
+  components: {
+    'list': List
+  },
   data: function() {
     return {
-      title: 'Home'
+      title: 'Basic Vue.js Starter'
     }
   }
 }
