@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div>
     <h2>Basic Vue.js Starter</h2>
     <p>This is a basic starter for a Vue.js app with Vuetify. Allows use of .vue files, no webpack or node.js required.</p>

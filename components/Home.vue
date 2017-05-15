@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div>
     <h3>{{title}}</h3>
     <list></list>

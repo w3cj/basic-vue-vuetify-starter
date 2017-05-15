@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div class="list-container">
     <list-item v-for="item in items" v-bind:item="item" v-bind:key="item.img">
     </list-item>

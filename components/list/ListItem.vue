@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <v-card class="cat-card">
     <v-card-row v-bind:img="item.img" height="300px">
       <v-card-text class="white--text pa-0">
@@ -31,7 +31,7 @@ module.exports = {
 }
 </script>
 
-<style lang="css">
+<style>
 .cat-card {
   max-width: 800px;
 }
